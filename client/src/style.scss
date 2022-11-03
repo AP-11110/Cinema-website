@@ -1,0 +1,86 @@
+.app{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        width: 1440px;
+
+
+        .navbar{
+            
+            .container{
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .logo{
+
+                    display: flex;
+                    justify-content: center;
+                    flex: 1;
+                    img{
+                        width: 50%;
+                    }
+                }
+                
+                .middle{
+                    flex: 3;
+                    
+                    button{
+
+                        background-color: hsl(12, 88%, 59%);
+                        color: white;
+                        font-weight: 300;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        border: none;
+                        padding: 5px;
+
+                        &:hover{
+                            background-color: hsl(12, 88%, 69%);
+                            color: hsl(12, 88%, 59%);
+                            border: 1px solid teal;
+                        }
+
+                    }
+                }
+
+                .right{
+
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 40px;
+
+                    span{
+                        font-size: 18px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .icon{
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .cart{
+                        display: flex;
+                        gap: 10px;
+                        cursor: pointer;
+
+                    }
+
+                    .login{
+                        display: flex;
+                        gap: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+    }
+}
