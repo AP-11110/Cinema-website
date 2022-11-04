@@ -11,17 +11,30 @@ const Navbar = () => {
           <img src={logo} alt=""></img>
         </div>
         <div className="middle">
-        <button>
-          SEARCH
-          <SearchIcon />
-        </button>
+          <select name="movies">
+            <option value="" selected disabled>SELECT A FILM</option>
+            <option value="superman">SUPERMAN</option>
+            <option value="shrek">SHREK</option>
+            <option value="inception">INCEPTION</option>
+            <option value="avatar">AVATAR</option>
+          </select>
+          <select name="date">
+            <option value="" selected disabled>SELECT A DATE</option>
+          </select>
+          <select name="time">
+            <option value="" selected disabled>SELECT A TIME</option>
+          </select>
+          <button>
+            SEARCH
+            <SearchIcon />
+          </button>
         </div>
         <div className="right">
-          <div className="cart">
+          <div className="item">
             <ShoppingCartIcon className='icon'/>
             <span>CART</span>
           </div>
-          <div className="login">
+          <div className="item">
             <AccountCircleIcon className='icon'/>
             <span>LOGIN</span>
           </div>
