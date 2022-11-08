@@ -13,7 +13,6 @@ const Navbar = () => {
 
   const [startDate, setStartDate] = useState(new Date());
   const [movie, setMovie] = useState('SELECT MOVIE');
-  console.log('first')
   return (
     <div>
       <div className='bg-black flex justify-between items-center'>

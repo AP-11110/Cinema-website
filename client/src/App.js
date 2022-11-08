@@ -6,15 +6,22 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Home from "./pages/Home"
 import "./index.css"
+import ComingSoon from "./components/ComingSoon"
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
-      <Menu />
-      <Outlet />
+    <div className='flex justify-center'>
+      <div className='container h-fit'>
+        <Navbar />
+        <Menu />
+        <Outlet />
+        </div>
+      </div>
+      <ComingSoon />
       <Footer />
     </>
+    
   )
 }
 
@@ -41,11 +48,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className='flex justify-center'>
-      <div className='container'>
-        <RouterProvider router={router}></RouterProvider>
-      </div>
-    </div>
+      <RouterProvider router={router}></RouterProvider>
   );
 }
 
