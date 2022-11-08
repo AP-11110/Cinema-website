@@ -5,7 +5,7 @@ import Footer from "./components/Footer"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Home from "./pages/Home"
-import "./style.scss"
+import "./index.css"
 
 const Layout = () => {
   return (
@@ -41,8 +41,8 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="app">
-      <div className="container">
+    <div className='flex justify-center'>
+      <div className='container'>
         <RouterProvider router={router}></RouterProvider>
       </div>
     </div>

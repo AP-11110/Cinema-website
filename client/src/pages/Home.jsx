@@ -12,17 +12,17 @@ const Home = () => {
 
     const prev = () => {
         if(slide > 1) {
-            ref.current.style.transform = `translateX(-${(slide - 2) * 1440}px)`;
+            ref.current.style.transform = `translateX(-${(slide - 2) * ref.current.offsetWidth}px)`;
             setSlide(prev => prev - 1);
         } else {
-            ref.current.style.transform = `translateX(-${(3 - 1) * 1440}px)`;
+            ref.current.style.transform = `translateX(-${(3 - 1) * ref.current.offsetWidth}px)`;
             setSlide(3);
         }
     }
 
     const next = () => {
         if(slide < 3) {
-            ref.current.style.transform = `translateX(-${slide * 1440}px)`;
+            ref.current.style.transform = `translateX(-${slide * ref.current.offsetWidth}px)`;
             setSlide(prev => prev + 1);
         } else {
             ref.current.style.transform = 'translateX(0px)';
@@ -31,25 +31,20 @@ const Home = () => {
     }
 
   return (
-    <div className="frame">
-        <div>
-
+    <div className='w-full h-3/6 overflow-hidden relative flex'>
+        <div ref={ref} className='flex ease-in-out duration-1000'>
+            <img className='min-w-full object-cover' src={batman} alt="" />
+            <img className='min-w-full object-cover' src={dumbledore} alt="" />
+            <img className='min-w-full object-cover' src={coda} alt="" />
         </div>
-        <div ref={ref} className="slider">
-            <img className="image" src={dumbledore} alt="" />
-            <img className="image" src={batman} alt="" />
-            <img className="image" src={coda} alt="" />
-        </div>
-        <div className="arrows">
+        <div className='absolute left-0 right-0 top-0 bottom-0 flex justify-between items-center z-50'>
             <div>
-                <ArrowForwardIosIcon className="arrow left" onClick={prev}/>
+                <ArrowForwardIosIcon className="rotate-180 text-white opacity-70 cursor-pointer hover:opacity-100" onClick={prev}/>
             </div>
             <div>
-                <ArrowForwardIosIcon className="arrow" onClick={next}/>
+                <ArrowForwardIosIcon className="text-white opacity-70 cursor-pointer hover:opacity-100" onClick={next}/>
 
             </div>
-        </div>
-        <div className="bottom">
         </div>
     </div>
   )
